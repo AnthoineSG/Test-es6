@@ -1,9 +1,11 @@
 import { Sequelize } from "sequelize";
 
-function getConnexion() {
-    return new Sequelize(process.env.BD_URL, {
-        logging: true
-    });
-}
+const connexion = new Sequelize("postgres://pokemon:pokemon@localhost:5432/pokemon",
+    {
+        define: {
+            logging: true
+        }
+    }
+);
 
-export default getConnexion;
+export default connexion;

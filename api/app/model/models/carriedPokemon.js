@@ -1,21 +1,24 @@
 import sequelize from "../connexion/conexion.js";
 import { DataTypes, Model } from "sequelize";
 
-class Type extends Model {}
+class carriedPokemon extends Model {}
 
-Type.init({
-    pokemon_id: {
-        type: DataTypes.TEXT,
+carriedPokemon.init({
+    trainer_id: {
+        type: DataTypes.INTEGER,
         primaryKey: true
     },
-    name: {
+    pokemon_id: {
+        type: DataTypes.TEXT,
+    },
+    pokemon_level: {
         type: DataTypes.INTEGER
     }
 }, {
     timestamps: false,
     sequelize,
-    tableName: "type"
+    tableName: "carried_pokemon"
 }
 );
 
-export default Type;
+export default carriedPokemon;
