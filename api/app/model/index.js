@@ -16,11 +16,6 @@ Type.belongsTo(Pokemon, {
     foreignKey: "pokemon_id"
 });
 
-
-
-
-
-
 export default {
     CarriedPokemon,
     Evolution,
